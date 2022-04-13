@@ -5,14 +5,14 @@
  $connection = mysqli_connect("localhost","root","admin","connect") or die("Error " . mysqli_error($connection));
 
     //fetch table rows from mysql db
-    $sql = "SELECT * FROM sinhvien";
+    $sql = "SELECT * FROM lop";
 
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
     //create an array
     $emparray = array();
 
-    $rows = mysqli_fetch_assoc($result);
+    // $rows = mysqli_fetch_assoc($result);
 
     while($row = mysqli_fetch_assoc($result))
     {
