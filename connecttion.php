@@ -1,8 +1,14 @@
-<?php 
-$conn = mysqli_connect("localhost", "root", "admin", "connect") or die("Kết nối thất bại");
-$sql = "SELECT * FROM db";
-$result = mysqli_query($conn, $sql);
-$arr = array();
-echo "hellomanisdas";
-?>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "admin";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, "connect");
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
