@@ -1,14 +1,19 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "admin";
+    //open connection to mysql db
+    $connection = mysqli_connect("us-cdbr-east-05.cleardb.net","be5e9c603b0178","8bbc452e","heroku_56f9eba53eaf186") or die("Error " . mysqli_error($connection));
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
+    //fetch table rows from mysql db
+    $sql = "select * from quanlysinhvien";
+    $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
+    //create an array
+    $emparray = array();
+    while($row =mysqli_fetch_assoc($result))
+    {
+        array_push($emparray, $row);
+    }
+    echo json_encode($emparray)."thanh cong";
+
+    //close the db connection
+    mysqli_close($connection);
 ?>
