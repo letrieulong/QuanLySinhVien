@@ -11,10 +11,8 @@
     while($row =mysqli_fetch_assoc($result))
     {
         array_push($emparray, $row);
-        echo array_push($emparray, $row)."thanh cong";
     }
-    echo $emparray."thanh cong";
-
+    echo json_encode($emparray)."thanh cong";
     //close the db connection
     mysqli_close($connection);
 ?>
