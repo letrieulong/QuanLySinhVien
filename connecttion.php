@@ -12,7 +12,7 @@
     {
         array_push($emparray, $row);
     }
-    echo json_encode($emparray)."thanh cong";
+    echo $emparray."thanh cong";
 
     //close the db connection
     mysqli_close($connection);
