@@ -5,7 +5,7 @@
  // $connection = mysqli_connect("localhost","root","admin","connect") or die("Error " . mysqli_error($connection));
 
     //fetch table rows from mysql db
-    $sql = "SELECT * FROM sinhvien";
+    $sql = "SELECT * FROM sinhvienlist";
 
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
