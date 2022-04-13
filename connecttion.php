@@ -9,7 +9,7 @@ $sql = "SELECT * FROM db";
 $result = mysqli_query($conn, $sql);
 // tạo một mảng
 $arr = array();
-
+echo "thanh cong";
 while ($rows = mysqli_fetch_assoc($result)) {
 	array_push($arr, $rows);
 }
