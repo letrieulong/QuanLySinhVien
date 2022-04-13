@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>hekllodnasdnasdhjj</title>
+	<title></title>
 </head>
 <body>
-<?php 
+	<?php 
 // kết nối tới mysql
-$conn = mysqli_connect("us-cdbr-east-05.cleardb.net", "be5e9c603b0178", "8bbc452e", "connect");
+$conn = mysqli_connect("localhost", "root", "admin", "connect");
 // câu lệnh truy vấn sql
 $sql = "SELECT * FROM db";
 // thực hiện cầu lên truy vấn và kết nối
